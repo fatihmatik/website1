@@ -1,0 +1,104 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100%;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.text p{
+    margin: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.images{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 36px;
+    border-radius: 8px;
+    border: 10px solid lightgray;
+    background-color: white;
+}
+
+
+.image{
+    clip-path: polygon(0% 0%, 100% 25%, 100% 100%, 0% 75%);
+    margin-bottom: -30px;
+    width: 200px;
+    height: 150px;
+    
+    overflow: hidden;
+    position: relative;
+    transition: clip-path 1s,
+                z-index 0.5s ease-in-out;
+}
+
+img{
+    display: block;
+    position: absolute;
+    width: 100%;
+    filter: blur(10px);
+    transition: filter 0.6s ease-in-out,
+                transform 0.3s ease-in-out;
+}
+
+.image:hover{
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 100;
+}
+
+.image:hover img{
+    filter: none;
+}
+
+.image:hover .overlay-text{
+    opacity: 0;
+}
+
+.image:nth-child(odd) img {
+    left: 50%;
+}
+
+.image:nth-child(even) img {
+    bottom: 15%;
+    right: 50%;
+}
+
+
+.image:nth-child(odd):hover img{
+    transform: translate(-50%,-15%);
+}
+
+.image:nth-child(even):hover img{
+    transform: translate(50%, 15%);
+}
+
+.overlay-text{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 24px;
+    text-shadow: 0px 0px 4px grey; 
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease-in-out;
+}
+
+  
