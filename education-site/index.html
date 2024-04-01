@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <title>YTUcation</title>
+</head>
+<body>
+
+    
+    <script src="./insertheader.js"></script>
+
+    <!-- Course content -->
+    <div class="flex justify-around py-4">
+        <div class="flex flex-col items-center w-full px-6">
+            <img src="./img/course1HTMLCSS.jpg" class="object-cover w-full shadow-lg rounded-2xl">
+            <p class="text-blue-500 font-bold mt-2 hover:text-blue-700">
+                <a href="./course1.html">HTML/CSS</a>
+            </p>
+        </div>
+        <div class="flex flex-col items-center w-full px-6">
+            <img src="./img/course2JS.png" class="object-cover  w-full hadow-lg rounded-2xl">
+            <p class="text-blue-500 font-bold mt-2 hover:text-blue-700">
+                <a href="./course2.html">JS Basics</a>
+            </p>
+        </div>
+        <div class="flex flex-col items-center w-full px-6">
+            <img src="./img/course3react.jpg" class="object-cover  w-full shadow-lg rounded-2xl">
+            <p class="text-blue-500 font-bold mt-2 hover:text-blue-700">
+                <a href="./course.html">React JS</a>
+            </p>
+        </div>
+        <div class="flex flex-col items-center w-full px-6">
+            <img src="./img/course4tailwindcss.png" class="object-cover  w-full shadow-lg rounded-2xl">
+            <p class="text-blue-500 font-bold mt-2 hover:text-blue-700">
+                <a href="./course4.html">Improved CSS with Tailwind</a>
+            </p>
+        </div>
+    </div>
+    
+    <!-- Hero -->
+    <div class="bg-[url('./img/background.png')] text-white py-4 bg-cover bg-center bg-opacity-0 px-12">
+        <h2 class="font-bold text-2xl">Improve your career by pursuing this top courses.</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur reiciendis modi commodi quo libero corporis possimus enim, quis necessitatibus saepe sunt id unde ratione tempore fugit nemo aperiam sit est!</p>
+    </div>
+    
+    <!-- Learnt -->
+    <div class="flex justify-center py-4 font-bold text-white bg-gradient-to-r from-cyan-100 to-blue-600 text-2xl">
+        <p>Check your Progress!</p>
+    </div>
+    
+    <!-- checkboxes -->
+    <div class="flex justify-around mt-10">
+        <label class="inline-flex items-center">
+            <input type="checkbox" id="checkbox1" class="form-checkbox text-blue-500 h-5 w-5">
+            <span class="ml-2">HTML/CSS</span>
+        </label>
+        
+        <label class="inline-flex items-center">
+            <input type="checkbox" id="checkbox2" class="form-checkbox text-blue-500 h-5 w-5">
+            <span class="ml-2">JS Basics</span>
+        </label>
+        <label class="inline-flex items-center">
+            <input type="checkbox" id="checkbox3" class="form-checkbox text-blue-500 h-5 w-5">
+            <span class="ml-2">React</span>
+        </label>
+        
+        <label class="inline-flex items-center">
+            <input type="checkbox" id="checkbox4" class="form-checkbox text-blue-500 h-5 w-5">
+            <span class="ml-2">Improved CSS with Tailwind</span>
+        </label>
+    </div>
+    
+    <!-- progess bar -->
+    <div class="my-4">
+        <p class="px-6 py-3 font-bold text-xl">Your Progress:</p>
+        <div class="h-6 border-4 border-solid border-gray-100">
+            <div id="progressBar" class="h-4  bg-green-500 transition-width duration-300 ease-in-out"></div>
+        </div>
+    </div>
+
+    <script src="insertfooter.js"></script>
+    <script src="progressbar.js"></script>
+</body>
+</html>
